@@ -244,9 +244,9 @@ extension NSMutableURLRequest {
     */
     public func appendParametersAsUrlEncoding(parameters: HTTPParameterProtocol) {
         if valueForHTTPHeaderField(contentTypeKey) == nil {
-            let charset = CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
-            setValue("application/x-www-form-urlencoded; charset=\(charset)",
-                forHTTPHeaderField:contentTypeKey)
+            // let charset = CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
+            // setValue("application/x-www-form-urlencoded; charset=\(charset)",
+            //     forHTTPHeaderField:contentTypeKey)
             
         }
         let queryString = parameters.createPairs(nil).map({ (pair) in
