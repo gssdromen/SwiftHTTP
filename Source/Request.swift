@@ -247,7 +247,6 @@ extension NSMutableURLRequest {
             let charset = CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
             setValue("application/x-www-form-urlencoded; charset=\(charset)",
                 forHTTPHeaderField:contentTypeKey)
-            
         }
         let queryString = parameters.createPairs(nil).map({ (pair) in
             return pair.escapedValue
