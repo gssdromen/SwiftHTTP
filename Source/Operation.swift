@@ -325,15 +325,15 @@ public class HTTP: NSOperation {
 	/**
 	Convenience bool to flag as operation userInitiated if necessary
 	*/
-	var userInitiated: Bool {
-		get {
-			return qualityOfService == .UserInitiated
-		}
-		set {
-			assert(state < State.Executing, "Cannot modify userInitiated after execution has begun.")
-			qualityOfService = newValue ? .UserInitiated : .Default
-		}
-	}
+//	var userInitiated: Bool {
+//		get {
+//			return qualityOfService == .UserInitiated
+//		}
+//		set {
+//			assert(state < State.Executing, "Cannot modify userInitiated after execution has begun.")
+//			qualityOfService = newValue ? .UserInitiated : .Default
+//		}
+//	}
 
     /**
     Class method to create a GET request that handles the NSMutableURLRequest and parameter encoding for you.
